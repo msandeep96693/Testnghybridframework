@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-18T21:44:00 IST" name="Default suite" finished-at="2025-05-18T21:44:13 IST" duration-ms="13080">
+  <suite started-at="2025-05-18T22:22:01 IST" name="Suite" finished-at="2025-05-18T22:22:48 IST" duration-ms="46638">
     <groups>
     </groups>
-    <test started-at="2025-05-18T21:44:00 IST" name="Default test" finished-at="2025-05-18T21:44:13 IST" duration-ms="13080">
+    <test started-at="2025-05-18T22:22:01 IST" name="Test" finished-at="2025-05-18T22:22:48 IST" duration-ms="46638">
       <class name="TESTEXECUTION.SigninExecutionclass">
-        <test-method is-config="true" signature="setup()[pri:0, instance:TESTEXECUTION.SigninExecutionclass@44c03695]" started-at="2025-05-18T21:44:00 IST" name="setup" finished-at="2025-05-18T21:44:12 IST" duration-ms="12207" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TESTEXECUTION.SigninExecutionclass@44c03695]" started-at="2025-05-18T22:22:01 IST" name="setup" finished-at="2025-05-18T22:22:47 IST" duration-ms="45790" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="signinexecution()[pri:0, instance:TESTEXECUTION.SigninExecutionclass@44c03695]" started-at="2025-05-18T21:44:12 IST" name="signinexecution" finished-at="2025-05-18T21:44:13 IST" duration-ms="598" status="PASS">
+        <test-method signature="signinpage()[pri:0, instance:TESTEXECUTION.SigninExecutionclass@44c03695]" started-at="2025-05-18T22:22:47 IST" name="signinpage" finished-at="2025-05-18T22:22:47 IST" duration-ms="559" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signinexecution -->
-        <test-method is-config="true" signature="tear(org.testng.ITestResult)[pri:0, instance:TESTEXECUTION.SigninExecutionclass@44c03695]" started-at="2025-05-18T21:44:13 IST" name="tear" finished-at="2025-05-18T21:44:13 IST" duration-ms="204" status="PASS">
+        </test-method> <!-- signinpage -->
+        <test-method is-config="true" signature="tear(org.testng.ITestResult)[pri:0, instance:TESTEXECUTION.SigninExecutionclass@44c03695]" started-at="2025-05-18T22:22:47 IST" name="tear" finished-at="2025-05-18T22:22:48 IST" duration-ms="221" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=signinexecution status=SUCCESS method=SigninExecutionclass.signinexecution()[pri:0, instance:TESTEXECUTION.SigninExecutionclass@44c03695] output={null}]]]>
+                <![CDATA[[TestResult name=signinpage status=SUCCESS method=SigninExecutionclass.signinpage()[pri:0, instance:TESTEXECUTION.SigninExecutionclass@44c03695] output={null}]]]>
               </value>
             </param>
           </params>
@@ -27,6 +27,6 @@
           </reporter-output>
         </test-method> <!-- tear -->
       </class> <!-- TESTEXECUTION.SigninExecutionclass -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
