@@ -12,9 +12,7 @@ public class SigninExecutionclass extends BaseFlow {
 	@Test
 	public void signinpage() throws InterruptedException
 	{
-		login = new Loginpage(driver);
-		login.emailaddresstextfield();
-		login.passwordtextfield();
-		login.clickonsigninbutton();
+		login = new Loginpage(driver);		
+		login.signinpage(prop.getProperty("username"), prop.getProperty("password"));
 	}
 }

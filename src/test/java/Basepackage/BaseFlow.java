@@ -1,9 +1,12 @@
 package Basepackage;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.Duration;
+import java.util.Properties;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -18,12 +21,26 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseFlow {
 	
+	public Properties prop;
 	public WebDriver driver;
+	
+	public BaseFlow() {
+		try {
+			prop = new Properties();
+			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+ "//src//test//resources//config.properties");
+			prop.load(ip);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	
 	@BeforeMethod
 	public  void setup()
 	{
-		String Browsername = "chrome";
+		String Browsername = prop.getProperty("browser");
 		
 		if(Browsername.equalsIgnoreCase("chrome"))
 		{
@@ -42,7 +59,8 @@ public class BaseFlow {
 		}
 		
 		driver.manage().window().maximize();
-		driver.get("https://v3opend.tech-active.com");
+//		driver.get("https://v3opend.tech-active.com");
+		driver.get(prop.getProperty("url"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	}
 	
@@ -71,4 +89,7 @@ public class BaseFlow {
 			driver.quit();
 		}
 	}
+	
+	
+	
 }

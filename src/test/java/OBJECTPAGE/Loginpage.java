@@ -1,9 +1,11 @@
 package OBJECTPAGE;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
 
 public class Loginpage  extends Basepage {
 	
@@ -17,22 +19,14 @@ public class Loginpage  extends Basepage {
 	@FindBy(xpath = "//input[@placeholder='Enter Password']") private WebElement passwordfield;
 	@FindBy(xpath = "//button[.='Sign In']") private WebElement signinbutton;
 	
-	
-	public void emailaddresstextfield() throws InterruptedException
+	public void signinpage(String un, String pwd)
 	{
 		waitforElement(emailaddressfield);
-		emailaddressfield.sendKeys("admin@opend.com");
-	}
-	
-	public void passwordtextfield() throws InterruptedException
-	{
+		emailaddressfield.sendKeys(un);
 		waitforElement(passwordfield);
-		passwordfield.sendKeys("1234");
-	}
-	
-	public void clickonsigninbutton() throws InterruptedException
-	{
-		waitforElement(signinbutton); 
-		signinbutton.click();
+		passwordfield.sendKeys(pwd);
+				// signin button click
+				JavascriptExecutor js = (JavascriptExecutor)driver;
+				js.executeScript("arguments[0].click();", signinbutton );
 	}
 }
