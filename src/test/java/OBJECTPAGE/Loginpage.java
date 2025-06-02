@@ -26,6 +26,7 @@ public class Loginpage  extends Basepage {
 		waitforElement(passwordfield);
 		passwordfield.sendKeys(pwd);
 				// signin button click
+				waitforElement(signinbutton);
 				JavascriptExecutor js = (JavascriptExecutor)driver;
 				js.executeScript("arguments[0].click();", signinbutton );
 	}
